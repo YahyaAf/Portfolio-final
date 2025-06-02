@@ -5,7 +5,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Yahya Afadisse - Portfolio",
   description: "Portfolio professionnel de Yahya Afadisse, Développeur Full Stack passionné",
-  generator: "v0.dev",
+  generator: "yahya-af",
 }
 
 export default function RootLayout({
