@@ -6,6 +6,7 @@ import { Github, Linkedin, Mail, Phone, Download, Code, Database, Settings, Pale
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
+import { TypeAnimation } from "react-type-animation"
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("hero")
@@ -372,14 +373,25 @@ export default function Portfolio() {
                 </motion.span>
               </motion.h1>
 
-              <motion.p
-                className="text-lg lg:text-xl text-gray-300 mb-6"
+              <motion.div
+                className="text-lg lg:text-xl mb-6 h-8"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Développeur Full Stack passionné
-              </motion.p>
+                <TypeAnimation
+                  sequence={[
+                    "Développeur Full Stack Laravel/React",
+                    3000, // Wait 3s
+                    "Développeur Full Stack Java/Angular",
+                    3000, // Wait 3s
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  className="bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent font-semibold"
+                  repeat={Infinity}
+                />
+              </motion.div>
 
               <motion.p
                 className="text-sm text-gray-400 mb-6 leading-relaxed"
