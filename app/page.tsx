@@ -422,7 +422,7 @@ export default function Portfolio() {
                     className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 transform transition-all duration-300 shadow-lg hover:shadow-red-500/25"
                     onClick={() =>
                       window.open(
-                        "https://drive.google.com/file/d/1bqH7fycX8KAS3pRHmYsVQ0F3ZEIfeVwR/view?usp=sharing",
+                        "https://drive.google.com/file/d/1y_D4_DqkLqXCgwh7b85t3nBuYnzCXU0L/view?usp=drive_link",
                         "_blank",
                       )
                     }
