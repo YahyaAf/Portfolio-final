@@ -7,6 +7,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { TypeAnimation } from "react-type-animation"
+import { 
+  SiJavascript, SiReact, SiVuedotjs, SiAngular, SiTailwindcss, SiBootstrap,
+  SiSpringboot, SiPhp, SiLaravel,
+  SiMysql, SiPostgresql, SiMongodb, SiOracle,
+  SiGit, SiDocker, SiGithubactions, SiJira, SiTrello, SiFigma
+} from "react-icons/si"
+import { FaJava } from "react-icons/fa"
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("hero")
@@ -63,32 +70,32 @@ export default function Portfolio() {
 
   const skills = {
     frontend: [
-      { name: "JavaScript (ES6+)", level: 85 },
-      { name: "React.js", level: 80 },
-      { name: "Vue.js", level: 80 },
-      { name: "Angular", level: 75 },
-      { name: "Tailwind CSS", level: 85 },
-      { name: "Bootstrap", level: 75 },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+      { name: "React.js", icon: SiReact, color: "#61DAFB" },
+      { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D" },
+      { name: "Angular", icon: SiAngular, color: "#DD0031" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
     ],
     backend: [
-      { name: "Java (SE 8/17)", level: 85 },
-      { name: "Spring Boot", level: 80 },
-      { name: "PHP", level: 85 },
-      { name: "Laravel", level: 85 },
+      { name: "Java", icon: FaJava, color: "#007396" },
+      { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
+      { name: "PHP", icon: SiPhp, color: "#777BB4" },
+      { name: "Laravel", icon: SiLaravel, color: "#FF2D20" },
     ],
     database: [
-      { name: "MySQL", level: 85 },
-      { name: "PostgreSQL", level: 75 },
-      { name: "MongoDB", level: 70 },
-      { name: "Oracle", level: 70 },
+      { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      { name: "Oracle", icon: SiOracle, color: "#F80000" },
     ],
     tools: [
-      { name: "Git/GitHub", level: 85 },
-      { name: "Docker", level: 75 },
-      { name: "GitHub Actions", level: 70 },
-      { name: "Postman", level: 80 },
-      { name: "Jira/Trello", level: 75 },
-      { name: "Scrum", level: 75 },
+      { name: "Git", icon: SiGit, color: "#F05032" },
+      { name: "Docker", icon: SiDocker, color: "#2496ED" },
+      { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
+      { name: "Jira", icon: SiJira, color: "#0052CC" },
+      { name: "Trello", icon: SiTrello, color: "#0052CC" },
+      { name: "Figma", icon: SiFigma, color: "#F24E1E" },
     ],
   }
 
@@ -99,7 +106,7 @@ export default function Portfolio() {
         "Site e-commerce moderne pour produits authentiques avec gestion complète CRUD, API REST Laravel et interface React.js responsive.",
       technologies: ["Laravel", "React.js", "MySQL", "Tailwind CSS", "REST API"],
       github: "https://github.com/YahyaAf/FAKHAR.ma",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&h=600&fit=crop",
     },
     {
       title: "FutChampions",
@@ -107,35 +114,35 @@ export default function Portfolio() {
         "Application de gestion et évaluation des joueurs de football avec système de notation dynamique et formation 4-3-3.",
       technologies: ["HTML5", "Tailwind CSS", "JavaScript"],
       github: "https://github.com/YahyaAf/FutChampions",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/futchampions-logo.jpg",
     },
     {
       title: "Youdemy",
       description: "Plateforme d'apprentissage en ligne avec gestion des cours et des étudiants.",
       technologies: ["PHP", "Laravel", "MySQL", "Bootstrap"],
       github: "https://github.com/YahyaAf/Youdemy",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop",
     },
     {
       title: "CreateCV",
       description: "Générateur de CV interactif permettant de créer des CV professionnels personnalisés.",
       technologies: ["JavaScript", "HTML5", "CSS3"],
       github: "https://github.com/YahyaAf/CreateCv",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop",
     },
     {
       title: "HRMS",
       description: "Système de gestion des ressources humaines avec gestion des employés et des congés.",
       technologies: ["Laravel", "MySQL", "Bootstrap"],
       github: "https://github.com/YahyaAf/hrms",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
     },
     {
       title: "TakeUrTerrain",
       description: "Application de réservation de terrains de sport avec système de paiement intégré.",
       technologies: ["PHP", "Laravel", "MySQL", "JavaScript"],
       github: "https://github.com/YahyaAf/TakeUrTerrain",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600&h=400&fit=crop",
     },
   ]
 
@@ -192,7 +199,6 @@ export default function Portfolio() {
   ]
 
   const navigationItems = [
-    { name: "Accueil", id: "hero" },
     { name: "À propos", id: "about" },
     { name: "Compétences", id: "skills" },
     { name: "Projets", id: "projects" },
@@ -262,18 +268,20 @@ export default function Portfolio() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-purple-500/20">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
+            {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent"
+              className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent cursor-pointer"
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
+              onClick={() => scrollToSection("hero")}
             >
               YA
             </motion.div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            {/* Desktop Navigation - Centered */}
+            <div className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
               {navigationItems.map((item, index) => (
                 <motion.button
                   key={item.name}
@@ -572,48 +580,59 @@ export default function Portfolio() {
                 }}
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className="bg-gray-900/50 border-purple-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-lg hover:shadow-purple-500/25">
+                <Card className="bg-gray-900/50 border-purple-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 h-full">
                   <CardContent className="p-5">
                     <motion.div
                       className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mb-3`}
                       whileHover={{
                         scale: 1.2,
                         rotate: 360,
-                        boxShadow: "0 10px 30px rgba(59, 130, 246, 0.3)",
+                        boxShadow: "0 10px 30px rgba(168, 85, 247, 0.4)",
                       }}
                       transition={{ duration: 0.5 }}
                     >
                       <category.icon className="h-5 w-5 text-white" />
                     </motion.div>
-                    <h3 className="text-lg font-semibold mb-3 text-white">{category.title}</h3>
-                    <div className="space-y-2">
-                      {category.skills.map((skill, skillIndex) => (
-                        <motion.div
-                          key={skill.name}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.5, delay: skillIndex * 0.1 }}
-                          viewport={{ once: true }}
-                        >
-                          <div className="flex justify-between mb-1">
-                            <span className="text-sm text-gray-300">{skill.name}</span>
-                            <span className="text-sm text-gray-400">{skill.level}%</span>
-                          </div>
-                          <div className="w-full bg-gray-700 rounded-full h-1.5">
+                    <h3 className="text-lg font-semibold mb-4 text-white">{category.title}</h3>
+                    <div className="flex flex-wrap gap-3 justify-center">
+                      {category.skills.map((skill, skillIndex) => {
+                        const IconComponent = skill.icon
+                        return (
+                          <motion.div
+                            key={skill.name}
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
+                            viewport={{ once: true }}
+                            whileHover={{
+                              scale: 1.15,
+                              y: -8,
+                              rotate: [0, -5, 5, 0],
+                            }}
+                            className="group relative"
+                          >
                             <motion.div
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${skill.level}%` }}
-                              transition={{ duration: 1, delay: 0.5 + skillIndex * 0.1 }}
-                              viewport={{ once: true }}
-                              className={`h-1.5 rounded-full bg-gradient-to-r ${category.color}`}
+                              className="w-14 h-14 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-purple-500/20 flex items-center justify-center cursor-pointer transition-all duration-300 hover:border-purple-500/50 hover:bg-gray-800/80"
                               whileHover={{
-                                boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)",
-                                scale: 1.05,
+                                boxShadow: `0 10px 30px ${skill.color}40`,
                               }}
-                            ></motion.div>
-                          </div>
-                        </motion.div>
-                      ))}
+                            >
+                              <IconComponent 
+                                className="w-7 h-7 transition-all duration-300" 
+                                style={{ color: skill.color }}
+                              />
+                            </motion.div>
+                            {/* Tooltip */}
+                            <motion.div
+                              initial={{ opacity: 0, y: 10 }}
+                              whileHover={{ opacity: 1, y: 0 }}
+                              className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none"
+                            >
+                              {skill.name}
+                            </motion.div>
+                          </motion.div>
+                        )
+                      })}
                     </div>
                   </CardContent>
                 </Card>
@@ -671,9 +690,9 @@ export default function Portfolio() {
                         <Image
                           src={project.image || "/placeholder.svg"}
                           alt={project.title}
-                          width={300}
-                          height={200}
-                          className="w-full h-40 object-cover"
+                          width={600}
+                          height={400}
+                          className="w-full h-56 object-cover"
                         />
                       </motion.div>
                       <motion.div
