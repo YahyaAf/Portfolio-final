@@ -210,11 +210,11 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden relative">
       {/* Modern Purple Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-black via-purple-950/20 to-black -z-10" />
+      <div className="fixed inset-0 bg-gradient-to-br from-black via-red-950/20 to-black -z-10" />
       
       {/* Animated gradient overlay */}
       <motion.div
-        className="fixed inset-0 bg-gradient-to-tr from-purple-900/5 via-transparent to-fuchsia-900/5 -z-10"
+        className="fixed inset-0 bg-gradient-to-tr from-red-900/5 via-transparent to-orange-900/5 -z-10"
         animate={{
           opacity: [0.3, 0.5, 0.3],
         }}
@@ -227,7 +227,7 @@ export default function Portfolio() {
       
       {/* Purple glow effects */}
       <motion.div
-        className="fixed top-1/4 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full filter blur-3xl -z-10"
+        className="fixed top-1/4 left-1/4 w-96 h-96 bg-red-600/10 rounded-full filter blur-3xl -z-10"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.1, 0.2, 0.1],
@@ -239,7 +239,7 @@ export default function Portfolio() {
         }}
       />
       <motion.div
-        className="fixed bottom-1/4 right-1/4 w-96 h-96 bg-fuchsia-600/10 rounded-full filter blur-3xl -z-10"
+        className="fixed bottom-1/4 right-1/4 w-96 h-96 bg-orange-600/10 rounded-full filter blur-3xl -z-10"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.15, 0.25, 0.15],
@@ -251,7 +251,7 @@ export default function Portfolio() {
         }}
       />
       <motion.div
-        className="fixed top-1/2 right-1/3 w-72 h-72 bg-purple-500/8 rounded-full filter blur-3xl -z-10"
+        className="fixed top-1/2 right-1/3 w-72 h-72 bg-red-500/8 rounded-full filter blur-3xl -z-10"
         animate={{
           scale: [1, 1.3, 1],
           x: [0, 30, 0],
@@ -265,14 +265,14 @@ export default function Portfolio() {
       />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-purple-500/20">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-red-500/20">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent cursor-pointer"
+              className="text-2xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent cursor-pointer"
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
               onClick={() => scrollToSection("hero")}
@@ -289,15 +289,15 @@ export default function Portfolio() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`hover:text-purple-400 transition-colors duration-300 relative group ${
-                    activeSection === item.id ? "text-purple-400" : "text-white"
+                  className={`hover:text-red-400 transition-colors duration-300 relative group ${
+                    activeSection === item.id ? "text-red-400" : "text-white"
                   }`}
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-purple-400 transition-all duration-300 ${
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-red-400 transition-all duration-300 ${
                       activeSection === item.id ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   ></span>
@@ -336,8 +336,8 @@ export default function Portfolio() {
                   transition={{ delay: index * 0.1 }}
                   className={`block w-full text-left py-2 px-4 rounded-lg transition-colors duration-300 ${
                     activeSection === item.id
-                      ? "text-purple-400 bg-purple-400/10"
-                      : "text-white hover:text-purple-400 hover:bg-purple-400/5"
+                      ? "text-red-400 bg-red-400/10"
+                      : "text-white hover:text-red-400 hover:bg-red-400/5"
                   }`}
                   whileHover={{ x: 10 }}
                 >
@@ -352,7 +352,7 @@ export default function Portfolio() {
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-fuchsia-600/20 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-orange-600/20 animate-pulse"></div>
         </motion.div>
 
         <div className="container mx-auto px-6 z-10">
@@ -365,7 +365,7 @@ export default function Portfolio() {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <motion.span
-                  className="bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent"
+                  className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -396,7 +396,7 @@ export default function Portfolio() {
                   ]}
                   wrapper="span"
                   speed={50}
-                  className="bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent font-semibold"
+                  className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent font-semibold"
                   repeat={Infinity}
                 />
               </motion.div>
@@ -419,7 +419,7 @@ export default function Portfolio() {
               >
                 <motion.div whileHover={{ scale: 1.05, rotateY: 5 }} whileTap={{ scale: 0.95 }}>
                   <Button
-                    className="bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700 transform transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
+                    className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 transform transition-all duration-300 shadow-lg hover:shadow-red-500/25"
                     onClick={() =>
                       window.open(
                         "https://drive.google.com/file/d/1bqH7fycX8KAS3pRHmYsVQ0F3ZEIfeVwR/view?usp=sharing",
@@ -435,7 +435,7 @@ export default function Portfolio() {
                 <motion.div whileHover={{ scale: 1.05, rotateY: -5 }} whileTap={{ scale: 0.95 }}>
                   <Button
                     variant="outline"
-                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white transform transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
+                    className="border-red-400 text-red-400 hover:bg-red-400 hover:text-white transform transition-all duration-300 shadow-lg hover:shadow-red-500/25"
                     onClick={() => scrollToSection("contact")}
                   >
                     Me contacter
@@ -456,7 +456,7 @@ export default function Portfolio() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-purple-600 to-fuchsia-600 rounded-full blur-2xl opacity-30"
+                  className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600 rounded-full blur-2xl opacity-30"
                   animate={{
                     scale: [1, 1.2, 1],
                     rotate: [0, 180, 360],
@@ -468,7 +468,7 @@ export default function Portfolio() {
                   }}
                 />
                 <motion.div
-                  className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-purple-400/50 shadow-2xl"
+                  className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-red-400/50 shadow-2xl"
                   whileHover={{
                     borderColor: "rgb(59 130 246 / 0.8)",
                     boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)",
@@ -494,14 +494,14 @@ export default function Portfolio() {
             className="text-center mb-12"
           >
             <motion.h2
-              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent"
+              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               À propos de moi
             </motion.h2>
             <motion.div
-              className="w-20 h-1 bg-gradient-to-r from-purple-400 to-fuchsia-400 mx-auto mb-6"
+              className="w-20 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 80 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -535,14 +535,14 @@ export default function Portfolio() {
             className="text-center mb-12"
           >
             <motion.h2
-              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent"
+              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               Compétences
             </motion.h2>
             <motion.div
-              className="w-20 h-1 bg-gradient-to-r from-purple-400 to-fuchsia-400 mx-auto mb-6"
+              className="w-20 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 80 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -552,7 +552,7 @@ export default function Portfolio() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Front-End", icon: Palette, skills: skills.frontend, color: "from-purple-500 to-fuchsia-500" },
+              { title: "Front-End", icon: Palette, skills: skills.frontend, color: "from-red-500 to-orange-500" },
               { title: "Back-End", icon: Code, skills: skills.backend, color: "from-green-500 to-emerald-500" },
               {
                 title: "Bases de données",
@@ -564,7 +564,7 @@ export default function Portfolio() {
                 title: "Outils & Méthodologie",
                 icon: Settings,
                 skills: skills.tools,
-                color: "from-purple-500 to-fuchsia-500",
+                color: "from-red-500 to-orange-500",
               },
             ].map((category, index) => (
               <motion.div
@@ -580,7 +580,7 @@ export default function Portfolio() {
                 }}
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className="bg-gray-900/50 border-purple-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 h-full">
+                <Card className="bg-gray-900/50 border-red-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-lg hover:shadow-red-500/25 h-full">
                   <CardContent className="p-5">
                     <motion.div
                       className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mb-3`}
@@ -612,7 +612,7 @@ export default function Portfolio() {
                             className="group relative"
                           >
                             <motion.div
-                              className="w-14 h-14 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-purple-500/20 flex items-center justify-center cursor-pointer transition-all duration-300 hover:border-purple-500/50 hover:bg-gray-800/80"
+                              className="w-14 h-14 rounded-xl bg-gray-800/50 backdrop-blur-sm border border-red-500/20 flex items-center justify-center cursor-pointer transition-all duration-300 hover:border-red-500/50 hover:bg-gray-800/80"
                               whileHover={{
                                 boxShadow: `0 10px 30px ${skill.color}40`,
                               }}
@@ -653,14 +653,14 @@ export default function Portfolio() {
             className="text-center mb-12"
           >
             <motion.h2
-              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent"
+              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               Mes Projets
             </motion.h2>
             <motion.div
-              className="w-20 h-1 bg-gradient-to-r from-purple-400 to-fuchsia-400 mx-auto mb-6"
+              className="w-20 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 80 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -683,7 +683,7 @@ export default function Portfolio() {
                 }}
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <Card className="bg-gray-900/50 border-purple-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 group shadow-lg hover:shadow-purple-500/25">
+                <Card className="bg-gray-900/50 border-red-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 group shadow-lg hover:shadow-red-500/25">
                   <CardContent className="p-0">
                     <div className="relative overflow-hidden rounded-t-lg">
                       <motion.div whileHover={{ scale: 1.1, rotateZ: 2 }} transition={{ duration: 0.3 }}>
@@ -721,7 +721,7 @@ export default function Portfolio() {
                               scale: 1.1,
                               backgroundColor: "rgba(59, 130, 246, 0.3)",
                             }}
-                            className="px-2 py-1 bg-purple-600/20 text-purple-300 rounded-md text-xs border border-purple-500/30 cursor-default"
+                            className="px-2 py-1 bg-red-600/20 text-purple-300 rounded-md text-xs border border-red-500/30 cursor-default"
                           >
                             {tech}
                           </motion.span>
@@ -736,7 +736,7 @@ export default function Portfolio() {
                           <Button
                             size="sm"
                             variant="outline"
-                            className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white w-full shadow-lg hover:shadow-purple-500/25"
+                            className="border-red-400 text-red-400 hover:bg-red-400 hover:text-white w-full shadow-lg hover:shadow-red-500/25"
                             onClick={() => window.open(project.github, "_blank")}
                           >
                             <Github className="mr-2 h-4 w-4" />
@@ -764,14 +764,14 @@ export default function Portfolio() {
             className="text-center mb-12"
           >
             <motion.h2
-              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent"
+              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               Expériences Professionnelles
             </motion.h2>
             <motion.div
-              className="w-24 h-1 bg-gradient-to-r from-purple-400 to-fuchsia-400 mx-auto mb-6"
+              className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 96 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -782,7 +782,7 @@ export default function Portfolio() {
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <motion.div
-                className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-400 to-fuchsia-400"
+                className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-400 to-orange-400"
                 initial={{ height: 0 }}
                 whileInView={{ height: "100%" }}
                 transition={{ duration: 2, delay: 0.5 }}
@@ -799,7 +799,7 @@ export default function Portfolio() {
                   whileHover={{ x: 10, scale: 1.02 }}
                 >
                   <motion.div
-                    className="absolute left-6 w-4 h-4 bg-gradient-to-r from-purple-400 to-fuchsia-400 rounded-full border-4 border-black"
+                    className="absolute left-6 w-4 h-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-full border-4 border-black"
                     whileHover={{
                       scale: 1.5,
                       boxShadow: "0 0 20px rgba(59, 130, 246, 0.8)",
@@ -815,9 +815,9 @@ export default function Portfolio() {
                       }}
                       transition={{ duration: 0.3 }}
                     >
-                      <Card className="bg-gray-900/50 border-purple-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-lg">
+                      <Card className="bg-gray-900/50 border-red-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-lg">
                         <CardContent className="p-5">
-                          <motion.div className="text-xs text-purple-400 font-semibold mb-2" whileHover={{ scale: 1.05 }}>
+                          <motion.div className="text-xs text-red-400 font-semibold mb-2" whileHover={{ scale: 1.05 }}>
                             {item.year}
                           </motion.div>
                           <motion.h3
@@ -839,7 +839,7 @@ export default function Portfolio() {
                                 viewport={{ once: true }}
                                 className="flex items-start text-gray-300 text-xs"
                               >
-                                <span className="text-purple-400 mr-2 mt-1">•</span>
+                                <span className="text-red-400 mr-2 mt-1">•</span>
                                 <span>{task}</span>
                               </motion.li>
                             ))}
@@ -866,14 +866,14 @@ export default function Portfolio() {
             className="text-center mb-12"
           >
             <motion.h2
-              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent"
+              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               Formation
             </motion.h2>
             <motion.div
-              className="w-24 h-1 bg-gradient-to-r from-purple-400 to-fuchsia-400 mx-auto mb-6"
+              className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto mb-6"
               initial={{ width: 0 }}
               whileInView={{ width: 96 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -884,7 +884,7 @@ export default function Portfolio() {
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <motion.div
-                className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-400 to-fuchsia-400"
+                className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-400 to-orange-400"
                 initial={{ height: 0 }}
                 whileInView={{ height: "100%" }}
                 transition={{ duration: 2, delay: 0.5 }}
@@ -901,7 +901,7 @@ export default function Portfolio() {
                   whileHover={{ x: 10, scale: 1.02 }}
                 >
                   <motion.div
-                    className="absolute left-6 w-4 h-4 bg-gradient-to-r from-purple-400 to-fuchsia-400 rounded-full border-4 border-black"
+                    className="absolute left-6 w-4 h-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-full border-4 border-black"
                     whileHover={{
                       scale: 1.5,
                       boxShadow: "0 0 20px rgba(59, 130, 246, 0.8)",
@@ -917,9 +917,9 @@ export default function Portfolio() {
                       }}
                       transition={{ duration: 0.3 }}
                     >
-                      <Card className="bg-gray-900/50 border-purple-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-lg">
+                      <Card className="bg-gray-900/50 border-red-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 shadow-lg">
                         <CardContent className="p-5">
-                          <motion.div className="text-xs text-purple-400 font-semibold mb-2" whileHover={{ scale: 1.05 }}>
+                          <motion.div className="text-xs text-red-400 font-semibold mb-2" whileHover={{ scale: 1.05 }}>
                             {item.year}
                           </motion.div>
                           <motion.h3
@@ -953,14 +953,14 @@ export default function Portfolio() {
             className="text-center mb-12"
           >
             <motion.h2
-              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent"
+              className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               Contact
             </motion.h2>
             <motion.div
-              className="w-24 h-1 bg-gradient-to-r from-purple-400 to-fuchsia-400 mx-auto mb-8"
+              className="w-24 h-1 bg-gradient-to-r from-red-400 to-orange-400 mx-auto mb-8"
               initial={{ width: 0 }}
               whileInView={{ width: 96 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -998,14 +998,14 @@ export default function Portfolio() {
                 title: "LinkedIn",
                 value: "yahya-afadisse",
                 link: "https://www.linkedin.com/in/yahya-afadisse-236b022a9/",
-                color: "from-purple-500 to-fuchsia-500",
+                color: "from-red-500 to-orange-500",
               },
               {
                 icon: Github,
                 title: "GitHub",
                 value: "YahyaAf",
                 link: "https://github.com/YahyaAf",
-                color: "from-purple-500 to-fuchsia-500",
+                color: "from-red-500 to-orange-500",
               },
             ].map((contact, index) => (
               <motion.div
@@ -1022,7 +1022,7 @@ export default function Portfolio() {
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <Card
-                  className="bg-gray-900/50 border-purple-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-purple-500/25"
+                  className="bg-gray-900/50 border-red-500/20 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-red-500/25"
                   onClick={() => window.open(contact.link, "_blank")}
                 >
                   <CardContent className="p-5 text-center">
@@ -1054,7 +1054,7 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="py-6 border-t border-purple-500/20">
+      <footer className="py-6 border-t border-red-500/20">
         <div className="container mx-auto px-6 text-center">
           <motion.p
             className="text-gray-400 text-sm"
