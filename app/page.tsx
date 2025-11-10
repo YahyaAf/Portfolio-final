@@ -494,11 +494,12 @@ export default function Portfolio() {
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              Je suis passionné par la création d'expériences web conviviales et engageantes, avec une solide maîtrise
-              des technologies front-end et back-end. Actuellement étudiant en première année à YouCode, je suis
-              désireux de mettre mes compétences au service de projets dynamiques. Toujours en quête de nouvelles
-              opportunités pour élargir mon expertise, je m'engage à obtenir des résultats significatifs et à innover
-              dans le domaine du développement web.
+              Je suis un développeur web professionnel en devenir, actuellement en deuxième année de formation
+              Full-Stack à YouCode avec une spécialisation en Java et Angular. J'ai acquis une solide maîtrise
+              des principes d'architecture, du développement côté serveur (Java/Spring) ainsi que des bonnes
+              pratiques front-end avec Angular et Tailwind CSS. J'apporte une attention particulière à la qualité
+              du code, aux performances et à l'expérience utilisateur, et je suis motivé par la contribution à des
+              projets réels qui résolvent des problèmes concrets et apportent de la valeur aux utilisateurs.
             </motion.p>
           </motion.div>
         </div>
