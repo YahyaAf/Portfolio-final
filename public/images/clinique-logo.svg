@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="18" fill="#0b0b0b" />
+  <circle cx="36" cy="44" r="18" fill="url(#g1)" />
+  <rect x="60" y="28" width="36" height="32" rx="6" fill="#111" stroke="url(#g1)" stroke-width="2" />
+  <text x="60" y="90" fill="#fff" font-size="12" font-family="Inter, Arial" font-weight="700">Clinique</text>
+</svg>
