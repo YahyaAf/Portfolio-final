@@ -15,6 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo.svg" />
+        <meta property="og:image" content="/logo.svg" />
+        <meta name="twitter:image" content="/logo.svg" />
+      </head>
       <body>{children}</body>
     </html>
   )

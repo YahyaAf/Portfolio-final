@@ -269,16 +269,17 @@ export default function Portfolio() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <motion.div
+            <motion.button
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent cursor-pointer"
-              whileHover={{ scale: 1.1, rotate: 5 }}
+              className="flex items-center gap-3 cursor-pointer"
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
               onClick={() => scrollToSection("hero")}
             >
-              YA
-            </motion.div>
+              <img src="/logo.svg" alt="YA logo" className="w-10 h-10 rounded-md" />
+              <span className="text-lg font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Yahya</span>
+            </motion.button>
 
             {/* Desktop Navigation - Centered */}
             <div className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
