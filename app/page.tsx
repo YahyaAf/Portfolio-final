@@ -14,6 +14,7 @@ import {
   SiGit, SiDocker, SiGithubactions, SiJira, SiTrello, SiFigma
 } from "react-icons/si"
 import { FaJava } from "react-icons/fa"
+import AvatarAnimated from "@/components/avatar-animated"
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("hero")
@@ -451,34 +452,12 @@ export default function Portfolio() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex justify-center"
             >
-              <motion.div
-                className="relative"
-                whileHover={{ scale: 1.05, rotateY: 10 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600 rounded-full blur-2xl opacity-30"
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 180, 360],
-                  }}
-                  transition={{
-                    duration: 8,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                  }}
-                />
-                <motion.div
-                  className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-red-400/50 shadow-2xl"
-                  whileHover={{
-                    borderColor: "rgb(59 130 246 / 0.8)",
-                    boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)",
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <Image src="/images/profile.jpg" alt="Yahya Afadisse" fill className="object-cover" />
-                </motion.div>
-              </motion.div>
+              {/* Animated avatar with red waveform/glow (replaces previous blue hover) */}
+              <div>
+                {/* using a small component for the animated avatar */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <AvatarAnimated src="/images/profile.jpg" alt="Yahya Afadisse" />
+              </div>
             </motion.div>
           </div>
         </div>
